@@ -17,10 +17,26 @@
 						<th>ID</th>
 						<th>Action</th>
 					</tr>
+					<tr>
+						<td><input class="form-control firstname-input"></td>
+						<td><input class="form-control lastname-input"></td>
+						<td><input class="form-control id-input"></td>
+						<td><button class="btn btn-primary add-student">Add</button></td>
+					</tr>
 				</thead>
+				<tbody class"students-list"></tbody>
 			</table>
-
 		</div>
+
+		<script type="text/template" class="students-list-template">
+			<td><span class="firstname"><%= firstname %></span></td>
+			<td><span class="lastname"><%= lastname %></span></td>
+			<td><span class="id"><%= id %></span></td>
+			<td>
+				<button class="btn btn-warning edit-student">Edit</button>
+				<button class="btn btn-danger delete-student">Delete</button>
+			</td>
+		</script>
 		
 		<script src="bower_components\jquery\dist\jquery.js"></script>
 		<script src="bower_components\underscore\underscore.js"></script>
